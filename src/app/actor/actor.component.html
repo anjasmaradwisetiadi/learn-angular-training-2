@@ -1,1 +1,18 @@
-<p>actor works!</p>
+<div class="grid">
+  <div
+    *ngFor="let item of actorCollect"
+    class="col-3 gap-2"
+  >
+    <mat-card
+      class="course-card card mt-5"
+    >
+      <mat-card-header>
+        <mat-card-title>{{item.name}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>name: {{item.name}}</p>
+        <p>birth: {{item.birth}}</p>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

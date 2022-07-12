@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
+import {BehaviorSubject} from 'rxjs';
+import {MovieModel} from './movie.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MovieService {
-
-  constructor() {}
-  movieList = [
+  movieList: MovieModel[] = [
     {
       id: 'M1',
       name: 'The Avengers',
@@ -43,4 +43,9 @@ export class MovieService {
       actors: ['A1', 'A2', 'A4']
     }
   ];
+
+  movieData = new BehaviorSubject<Array<MovieModel>>(this.movieList);
+  constructor() {}
+
+
 }

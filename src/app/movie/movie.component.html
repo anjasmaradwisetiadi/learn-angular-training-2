@@ -1,1 +1,20 @@
-<p>movie works!</p>
+<div class="grid">
+  <div
+    *ngFor="let item of movieCollect"
+    class="col-3 gap-2">
+    <mat-card
+      class="course-card card mt-5">
+      <mat-card-header>
+        <mat-card-title>{{item.name}}</mat-card-title>
+        <mat-card-subtitle>{{item.studio}}</mat-card-subtitle>
+      </mat-card-header>
+      <img mat-card-image [src]="item.poster" [alt]="item.name">
+      <mat-card-actions>
+        <button
+          class="bg-primary"
+          (click)="handleDetailMovie(item.id)"
+          mat-button>Detail</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
