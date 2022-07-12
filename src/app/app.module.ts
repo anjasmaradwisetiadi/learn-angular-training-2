@@ -1,5 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
+import Routers from './routing';
+
 /*import * as prime from '../../node_modules/primeflex/primeflex.css';*/
 /*import * as prime from '~/node_modules/primeflex/primeflex.scss/primeflex.css';*/
 
@@ -11,6 +14,14 @@ import { ActorComponent } from './actor/actor.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { DetailComponent } from './actor/detail/detail.component';
 import { AboutComponent } from './about/about.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatButtonModule} from '@angular/material/button';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+import {MatIconModule} from '@angular/material/icon';
+import { NotFoundComponent } from './components/not-found/not-found.component';
+import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -19,12 +30,20 @@ import { AboutComponent } from './about/about.component';
     ActorComponent,
     NavbarComponent,
     DetailComponent,
-    AboutComponent
+    AboutComponent,
+    NotFoundComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    RouterModule.forRoot(Routers),
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

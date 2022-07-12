@@ -1,1 +1,37 @@
-<p>navbar works!</p>
+<mat-sidenav #sidenav>
+  <mat-nav-list (click)="sidenav.close()">
+    <a mat-list-item routerLink="/Movie">
+      <mat-icon>
+        local_movies
+      </mat-icon>
+      <span>
+          Movie
+      </span>
+    </a>
+    <a mat-list-item routerLink="/Actor">
+      <mat-icon>
+        library_books
+      </mat-icon>
+      <span>
+          Actors
+      </span>
+    </a>
+    <a mat-list-item routerLink="/About">
+      <mat-icon>
+        face
+      </mat-icon>
+      <span>
+          About
+      </span>
+    </a>
+  </mat-nav-list>
+</mat-sidenav>
+<mat-toolbar color="primary">
+  <button mat-icon-button class="style-icon" (click)="sidenav.open()">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <a mat-button routerLink="/">
+    <mat-icon>home</mat-icon>
+    Home
+  </a>
+</mat-toolbar>
