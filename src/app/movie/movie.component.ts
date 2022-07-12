@@ -2,6 +2,7 @@ import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs';
 import {MovieModel} from './movie.model';
 import {MovieService} from './movie.service';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-movie',
@@ -11,7 +12,10 @@ import {MovieService} from './movie.service';
 export class MovieComponent implements OnInit, OnDestroy {
   movieCollect: MovieModel[] = [];
   movieDataSubscribe: Subscription;
-  constructor(private movieService: MovieService) { }
+  constructor(
+    private movieService: MovieService,
+    private routes: Router
+  ) { }
 
   ngOnInit(): void {
     this.movieDataSubscribe = this.movieService.movieData.subscribe((data: MovieModel[]) => {
@@ -24,8 +28,7 @@ export class MovieComponent implements OnInit, OnDestroy {
   }
 
   handleDetailMovie(id: string): void{
-    console.log('id');
-    console.log(id);
+    this.routes.navigate([`/Detail-Movie/${id}`]);
   }
 
 }
