@@ -1,3 +1,22 @@
 .width-table{
   min-width: 650px;
 }
+
+.active{
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 10px;
+  background-color: green;
+  border-radius: 50%;
+  position: relative;
+}
+.passive{
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 10px;
+  background-color: black;
+  border-radius: 50%;
+  position: relative;
+}

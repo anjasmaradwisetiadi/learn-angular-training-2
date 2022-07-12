@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import Routers from './routing';
+import {ReactiveFormsModule, FormsModule } from '@angular/forms';
 
 /*import * as prime from '../../node_modules/primeflex/primeflex.css';*/
 /*import * as prime from '~/node_modules/primeflex/primeflex.scss/primeflex.css';*/
@@ -23,10 +24,14 @@ import { HomeComponent } from './home/home.component';
 import {MatCardModule} from '@angular/material/card';
 import { DetailMovieComponent } from './movie/detail-movie/detail-movie.component';
 import { DetailActorComponent } from './actor/detail-actor/detail-actor.component';
-import {MatTabsModule} from "@angular/material/tabs";
+import {MatTabsModule} from '@angular/material/tabs';
 import { TablePracticeComponent } from './table-practice/table-practice.component';
-import {MatTableModule} from "@angular/material/table";
+import {MatTableModule} from '@angular/material/table';
 import { FilterTablePracticeComponent } from './table-practice/filter-table-practice/filter-table-practice.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatInputModule} from '@angular/material/input';
+import {MatSelectModule} from '@angular/material/select';
+
 
 
 @NgModule({
@@ -48,6 +53,8 @@ import { FilterTablePracticeComponent } from './table-practice/filter-table-prac
     AppRoutingModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(Routers),
+    FormsModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
@@ -56,6 +63,10 @@ import { FilterTablePracticeComponent } from './table-practice/filter-table-prac
     MatCardModule,
     MatTabsModule,
     MatTableModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatSelectModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]
