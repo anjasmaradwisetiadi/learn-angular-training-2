@@ -39,6 +39,8 @@ export class DetailMovieComponent implements OnInit, OnDestroy {
         this.detailMovie = data[0];
       });
 
+    this.actorSubscribe = this.filterActorList();
+
 /*    #tanya filter rxjs*/
 /*    this.actorSubscribe = this.actorService.actorData
       .pipe(
@@ -58,7 +60,6 @@ export class DetailMovieComponent implements OnInit, OnDestroy {
       console.log(data);
     });*/
 
-    this.filterActorList();
   }
 
   ngOnDestroy(): void{
@@ -67,8 +68,8 @@ export class DetailMovieComponent implements OnInit, OnDestroy {
     this.actorSubscribe.unsubscribe();
   }
 
-  filterActorList(): void{
-    this.actorSubscribe = this.actorService.actorData.subscribe((data) => {
+  filterActorList(): Subscription{
+    return this.actorService.actorData.subscribe((data) => {
       data.forEach((items: ActorModel) => {
         this.detailMovie.actors.forEach((actor: string) => {
           if (items.id === actor){

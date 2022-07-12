@@ -1,0 +1,29 @@
+
+<div class="grid">
+  <div class="col">
+    <table
+      mat-table
+      [dataSource]="mentorCollect"
+      class="mat-elevation-z8 width-table"
+    >
+      <ng-container matColumnDef="Name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.civility}}. {{element.last_name}} {{ element.first_name}} </td>
+      </ng-container>
+      <ng-container matColumnDef="UserType">
+        <th mat-header-cell *matHeaderCellDef> User Type</th>
+        <td mat-cell *matCellDef="let element"> {{element.company.user_type}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Email">
+        <th mat-header-cell *matHeaderCellDef> Email </th>
+        <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Status">
+        <th mat-header-cell *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let element"> {{element.user_status}} </td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>

@@ -24,6 +24,9 @@ import {MatCardModule} from '@angular/material/card';
 import { DetailMovieComponent } from './movie/detail-movie/detail-movie.component';
 import { DetailActorComponent } from './actor/detail-actor/detail-actor.component';
 import {MatTabsModule} from "@angular/material/tabs";
+import { TablePracticeComponent } from './table-practice/table-practice.component';
+import {MatTableModule} from "@angular/material/table";
+import { FilterTablePracticeComponent } from './table-practice/filter-table-practice/filter-table-practice.component';
 
 
 @NgModule({
@@ -37,6 +40,8 @@ import {MatTabsModule} from "@angular/material/tabs";
     HomeComponent,
     DetailMovieComponent,
     DetailActorComponent,
+    TablePracticeComponent,
+    FilterTablePracticeComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +55,7 @@ import {MatTabsModule} from "@angular/material/tabs";
     MatIconModule,
     MatCardModule,
     MatTabsModule,
+    MatTableModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
