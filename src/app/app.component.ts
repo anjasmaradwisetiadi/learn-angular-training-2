@@ -9,7 +9,7 @@ import {TranslateService} from '@ngx-translate/core';
 export class AppComponent {
   title = 'learning-angular-training-v2';
   constructor(private translate: TranslateService) {
-    translate.setDefaultLang('en');
-    translate.use('en');
+/*    translate.setDefaultLang('en');
+    translate.use('en');*/
   }
 }

@@ -41,9 +41,10 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MaterialAngularModule} from './material-angular/material-angular.module';
 
 export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
-  return new TranslateHttpLoader(http, './assets/localization/', '.json');
+  return new TranslateHttpLoader(http, 'assets/localization/', '.json');
 }
 
 
@@ -86,14 +87,7 @@ export function HttpLoaderFactory(http: HttpClient): TranslateHttpLoader {
     MatDatepickerModule,
     MatNativeDateModule,
     MatDialogModule,
-    TranslateModule.forRoot({
-      defaultLanguage: 'en',
-      loader: {
-        provide: TranslateLoader,
-        useFactory: HttpLoaderFactory,
-        deps: [HttpClient]
-      }
-    }),
+    MaterialAngularModule
   ],
   entryComponents: [
     CreateActorsComponent

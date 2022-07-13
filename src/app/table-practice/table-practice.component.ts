@@ -29,7 +29,7 @@ export class TablePracticeComponent implements OnInit, OnDestroy {
   }
 
   mentorDataCall(): Subscription{
-    return this.tablePracticeService.mentorData.subscribe((data: MentorModel[]) => {
+    return this.tablePracticeService.mentorGetList().subscribe((data: MentorModel[]) => {
       this.mentorCollect = data;
     });
   }
