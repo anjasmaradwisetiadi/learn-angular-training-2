@@ -42,12 +42,11 @@ export class DetailMovieComponent implements OnInit, OnDestroy {
     this.actorSubscribe = this.filterActorList();
 
 /*    #tanya filter rxjs*/
-/*    this.actorSubscribe = this.actorService.actorData
+/*
+    this.actorSubscribe = this.actorService.actorData
       .pipe(
         map((items: ActorModel[]) => {
           return this.detailMovie.actors.map((actors: string) => {
-            console.log('actors');
-            console.log(actors);
             return items.filter((item: ActorModel) => {
               console.log('item actor');
               console.log(item);
@@ -58,7 +57,8 @@ export class DetailMovieComponent implements OnInit, OnDestroy {
       .subscribe((data) => {
       console.log('data');
       console.log(data);
-    });*/
+    });
+*/
 
   }
 
@@ -74,9 +74,12 @@ export class DetailMovieComponent implements OnInit, OnDestroy {
         this.detailMovie.actors.forEach((actor: string) => {
           if (items.id === actor){
             this.actorList.push(items);
+            console.log('this.actorList');
+            console.log(this.actorList);
           }
         });
       });
     });
+
   }
 }

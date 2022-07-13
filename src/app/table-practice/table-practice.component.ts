@@ -58,10 +58,11 @@ export class TablePracticeComponent implements OnInit, OnDestroy {
 
   mathcer(item, name, usertype, email, status): any{
     const isNameMatch = item.first_name.includes(name);
+    const isLastNameMatch = item.last_name.includes(name);
     const isUserTypeMatch = item.company.user_type.includes(usertype);
     const isEmailMatch = item.email.includes(email);
     const isUserStatus = item.user_status.includes(status);
-    return isNameMatch && isUserTypeMatch && isEmailMatch && isUserStatus;
+    return (isNameMatch || isLastNameMatch) && isUserTypeMatch && isEmailMatch && isUserStatus;
   }
 
 }
