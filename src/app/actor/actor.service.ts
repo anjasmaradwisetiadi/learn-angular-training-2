@@ -59,11 +59,11 @@ export class ActorService {
   constructor() { }
 
   addActors(status: string, params: ActorModel): void{
-      if (status === 'berhasil'){
+      if (status === 'successfull'){
         this.actorLIst.push(params);
         this.actorData.next(this.actorLIst.slice());
-      }else if (status === 'gagal'){
-        this.actorData.error('gagal tambah data');
+      }else if (status === 'failedl'){
+        this.actorData.error('Your Failed Save Data!');
       }
   }
 }

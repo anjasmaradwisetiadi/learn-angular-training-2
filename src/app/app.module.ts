@@ -8,6 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 /*import * as prime from '../../node_modules/primeflex/primeflex.css';*/
 /*import * as prime from '~/node_modules/primeflex/primeflex.scss/primeflex.css';*/
 
+import { SweetAlert2Module } from '@sweetalert2/ngx-sweetalert2';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -61,6 +62,7 @@ import {MatDialogModule} from "@angular/material/dialog";
     AppRoutingModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(Routers),
+    SweetAlert2Module.forRoot(),
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,

@@ -34,13 +34,12 @@ export class CreateActorsComponent implements OnInit {
   }
 
   handleCancel(): void{
-    console.log('cancel');
     this.initForm();
     this.dialogRef.close();
   }
 
   handleSubmit(): void{
-    const status = 'berhasil';
+    const status = 'failed';
     this.actorService.addActors(status , this.formCreateActor.value);
     this.dialogRef.close();
   }

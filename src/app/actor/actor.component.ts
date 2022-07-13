@@ -5,6 +5,7 @@ import {Subscription} from 'rxjs';
 import {FormBuilder, FormGroup} from '@angular/forms';
 import {MatDialog} from '@angular/material/dialog';
 import {CreateActorsComponent} from './create-actors/create-actors.component';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-actor',
@@ -25,8 +26,11 @@ export class ActorComponent implements OnInit, OnDestroy {
     this.actorListSubscribe = this.actorService.actorData.subscribe((data: ActorModel[]) => {
       this.actorCollect = data;
     }, (error) => {
-      console.log('error');
-      console.log(error);
+      Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: `${error}`,
+        footer: '<a href="">Why do I have this issue?</a>'});
     });
   }
 
