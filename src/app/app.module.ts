@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import Routers from './routing';
 import {ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 /*import * as prime from '../../node_modules/primeflex/primeflex.css';*/
 /*import * as prime from '~/node_modules/primeflex/primeflex.scss/primeflex.css';*/
@@ -20,6 +21,7 @@ import { DetailMovieComponent } from './movie/detail-movie/detail-movie.componen
 import { DetailActorComponent } from './actor/detail-actor/detail-actor.component';
 import { TablePracticeComponent } from './table-practice/table-practice.component';
 import { FilterTablePracticeComponent } from './table-practice/filter-table-practice/filter-table-practice.component';
+import { CreateActorsComponent } from './actor/create-actors/create-actors.component';
 import {MatCardModule} from '@angular/material/card';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatTableModule} from '@angular/material/table';
@@ -31,6 +33,11 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import {MatIconModule} from '@angular/material/icon';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatDialogModule} from "@angular/material/dialog";
+
 
 
 
@@ -47,6 +54,7 @@ import {MatIconModule} from '@angular/material/icon';
     DetailActorComponent,
     TablePracticeComponent,
     FilterTablePracticeComponent,
+    CreateActorsComponent,
   ],
   imports: [
     BrowserModule,
@@ -55,6 +63,7 @@ import {MatIconModule} from '@angular/material/icon';
     RouterModule.forRoot(Routers),
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
     MatToolbarModule,
     MatButtonModule,
     MatSidenavModule,
@@ -66,7 +75,13 @@ import {MatIconModule} from '@angular/material/icon';
     MatFormFieldModule,
     MatInputModule,
     MatSelectModule,
-
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatDialogModule,
+  ],
+  entryComponents: [
+    CreateActorsComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

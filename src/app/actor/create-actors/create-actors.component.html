@@ -1,0 +1,66 @@
+<form [formGroup]="formCreateActor">
+  <h1 mat-dialog-title>Add Actors</h1>
+  <hr>
+  <div mat-dialog-content>
+    <div class="grid">
+      <div class="col-3 flex align-items-center">
+        <mat-radio-group aria-label="Civility" formControlName="civility">
+          <mat-radio-button value="Mr" class="mr-2">Mr. </mat-radio-button>
+          <mat-radio-button value="Ms">Ms. </mat-radio-button>
+        </mat-radio-group>
+      </div>
+      <div class="col-3">
+        <mat-form-field class="w-full" >
+          <input class="width-full" matInput placeholder="Name" formControlName="name">
+        </mat-form-field>
+      </div>
+      <div class="col-3">
+        <mat-form-field class="w-full" >
+          <input class="width-full" matInput placeholder="First Name" formControlName="first_name">
+        </mat-form-field>
+      </div>
+      <div class="col-3">
+        <mat-form-field class="w-full" >
+          <input class="width-full" matInput placeholder="Last Name" formControlName="last_name">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="grid mt-2">
+      <div class="col-4">
+        <mat-form-field class="mr-2">
+          <mat-label>Select Gender</mat-label>
+          <mat-select formControlName="gender">
+            <mat-option disabled>None</mat-option>
+            <mat-option value="male">Male</mat-option>
+            <mat-option value="female">Female</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      <div class="col-4">
+        <mat-form-field>
+          <mat-label>Choose a date</mat-label>
+          <input matInput formControlName="birth" [matDatepicker]="birthDatePicker" >
+          <mat-datepicker-toggle matSuffix [for]="birthDatePicker"></mat-datepicker-toggle>
+          <mat-datepicker #birthDatePicker></mat-datepicker>
+        </mat-form-field>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div mat-dialog-actions class="flex flex-row-reverse">
+    <button
+      mat-button
+      class="bg-orange-400"
+      (click) = "handleCancel()"
+    >
+      Cancel
+    </button>
+    <button
+      mat-button
+      class="bg-primary mr-2"
+      (click)="handleSubmit()"
+    >
+      Save
+    </button>
+  </div>
+</form>

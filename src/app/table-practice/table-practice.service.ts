@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject} from 'rxjs';
+import {BehaviorSubject, Observable} from 'rxjs';
 import {MentorModel} from './table-practice.model';
+import {HttpClient} from '@angular/common/http';
 /*import * as mentor from '../../assets/data/mentor.json';*/
 
 @Injectable({
@@ -8,7 +9,14 @@ import {MentorModel} from './table-practice.model';
 })
 export class TablePracticeService {
   mentorList = require('../data/mentor/mentor.json');
+
   /*pakai httpclient get*/
   mentorData = new BehaviorSubject<Array<MentorModel>>(this.mentorList);
-  constructor() { }
+
+  constructor(private httpClient: HttpClient) { }
+
+/*  mentorGetList(): Observable<any> {
+    return this.httpClient.get('./data/mentor/mentor.json');
+  }*/
+
 }
