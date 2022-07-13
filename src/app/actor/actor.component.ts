@@ -42,6 +42,15 @@ export class ActorComponent implements OnInit, OnDestroy {
     console.log('add button');
     this.dialog.open(CreateActorsComponent, {
       width: '600px',
+    }).afterClosed().subscribe((result) => {
+      if (result) {
+        Swal.fire({
+          icon: 'success',
+          title: 'berhasil',
+          text: 'Berhasil',
+          footer: '<a href="">Why do I have this issue?</a>'
+        });
+      }
     });
   }
 

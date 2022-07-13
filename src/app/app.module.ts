@@ -37,7 +37,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
-import {MatDialogModule} from "@angular/material/dialog";
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 

@@ -39,9 +39,9 @@ export class CreateActorsComponent implements OnInit {
   }
 
   handleSubmit(): void{
-    const status = 'failed';
+    const status = 'successfull';
     this.actorService.addActors(status , this.formCreateActor.value);
-    this.dialogRef.close();
+    this.dialogRef.close(true);
   }
 
 
