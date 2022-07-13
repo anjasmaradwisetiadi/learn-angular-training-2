@@ -27,15 +27,27 @@
   </mat-nav-list>
 </mat-sidenav>
 <mat-toolbar color="primary">
-  <button mat-icon-button class="style-icon" (click)="sidenav.open()">
-    <mat-icon>menu</mat-icon>
-  </button>
-  <a mat-button routerLink="/">
-    <mat-icon>home</mat-icon>
-    Home
-  </a>
-  <a mat-button routerLink="/Table-Practice">
-    <mat-icon>list_alt</mat-icon>
-    Tabel Practice
-  </a>
+  <div class="flex justify-content-between">
+    <div>
+      <button mat-icon-button class="style-icon" (click)="sidenav.open()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <a mat-button routerLink="/">
+        <mat-icon>home</mat-icon>
+        Home
+      </a>
+      <a mat-button routerLink="/Table-Practice">
+        <mat-icon>list_alt</mat-icon>
+        Tabel Practice
+      </a>
+    </div>
+    <div>
+      <mat-form-field appearance="fill">
+        <mat-label>Translate</mat-label>
+        <select matNativeControl (change)="selectLanguage($event)">
+          <option value="en">English (En)</option>
+          <option value="indo">Indonesia (Ind)</option>
+      </mat-form-field>
+    </div>
+  </div>
 </mat-toolbar>

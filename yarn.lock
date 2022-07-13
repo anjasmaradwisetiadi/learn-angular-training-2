@@ -1202,6 +1202,13 @@
     enhanced-resolve "4.3.0"
     webpack-sources "1.4.3"
 
+"@ngx-translate/core@^13.0.0":
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/@ngx-translate/core/-/core-13.0.0.tgz#60547cb8a0845a2a0abfde6b0bf5ec6516a63fd6"
+  integrity sha512-+tzEp8wlqEnw0Gc7jtVRAJ6RteUjXw6JJR4O65KlnxOmJrCGPI0xjV/lKRnQeU0w4i96PQs/jtpL921Wrb7PWg==
+  dependencies:
+    tslib "^2.0.0"
+
 "@nodelib/fs.scandir@2.1.5":
   version "2.1.5"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.scandir/-/fs.scandir-2.1.5.tgz#7619c2eb21b25483f6d167548b4cfd5a7488c3d5"
@@ -1261,6 +1268,13 @@
     pacote "9.5.12"
     semver "7.3.2"
     semver-intersect "1.4.0"
+
+"@sweetalert2/ngx-sweetalert2@^9.0.0":
+  version "9.0.0"
+  resolved "https://registry.yarnpkg.com/@sweetalert2/ngx-sweetalert2/-/ngx-sweetalert2-9.0.0.tgz#5ca82387b75b88ff9e7b669a7abcc5e627ba151c"
+  integrity sha512-J1e5ksyTuP0qnhOjFiFCuO6rfHueTFKF54Qq5KR1ZEw+pPURC4CJtUZnsSe4osU9WCdOrvGfEfMkz6c3ceRZbA==
+  dependencies:
+    tslib "^2.0.0"
 
 "@types/glob@^7.1.1":
   version "7.2.0"
@@ -7083,7 +7097,7 @@ prepend-http@^1.0.0:
   resolved "https://registry.yarnpkg.com/prepend-http/-/prepend-http-1.0.4.tgz#d4f4562b0ce3696e41ac52d0e002e57a635dc6dc"
   integrity sha512-PhmXi5XmoyKw1Un4E+opM2KcsJInDvKyuOumcjjw3waw86ZNjHwVUOOWLc4bCzLdcKNaWBH9e99sbWzDQsVaYg==
 
-primeflex@^3.0.0:
+primeflex@3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/primeflex/-/primeflex-3.2.1.tgz#dc557b7e895dd0496a3681fb0d8841d2ddca5abf"
   integrity sha512-sGDJ4mh2fG19xa1yc4IPGSQ8MUMyu5nU+tYnl27AFuFHhX8XwEA7fWCtWyBbclclVhXtre+Kf9WobWPnfxWAEQ==
@@ -8477,6 +8491,11 @@ svgo@^1.0.0:
     stable "^0.1.8"
     unquote "~1.1.1"
     util.promisify "~1.0.0"
+
+sweetalert2@^11.4.20:
+  version "11.4.20"
+  resolved "https://registry.yarnpkg.com/sweetalert2/-/sweetalert2-11.4.20.tgz#20e5f6860af08c70fa27fa134ae95a79e8e6464a"
+  integrity sha512-3LiBFa5yRmTcqM0vGcFmo0EnhmaMSJfzhFpvZoXK6BOY94HIcIUbwhhW+NY5oXOpz5CT21qFAu0fKCUkOc/Pew==
 
 symbol-observable@1.2.0:
   version "1.2.0"

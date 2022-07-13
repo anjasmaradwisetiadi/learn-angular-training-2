@@ -62,7 +62,7 @@ export class ActorService {
       if (status === 'successfull'){
         this.actorLIst.push(params);
         this.actorData.next(this.actorLIst.slice());
-      }else if (status === 'failedl'){
+      }else if (status === 'failed'){
         this.actorData.error('Your Failed Save Data!');
       }
   }

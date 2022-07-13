@@ -1,0 +1,17 @@
+{
+  "add": {
+    "title": "Tambah Actors",
+    "name": "Nama",
+    "first_name": "Nama Depan",
+    "civility_mr": "Tuan. ",
+    "civility_ms": "Nyonya. ",
+    "last_name": "Nama Terakhir",
+    "select_gender": "Pilih Gender",
+    "gender_male": "Laki - laki",
+    "gender_female": "Wanita",
+    "none": "Kosong",
+    "choose_data": "Pilih waktu",
+    "save": "Simpan",
+    "cancel": "Batal"
+  }
+}

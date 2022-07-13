@@ -1,0 +1,17 @@
+{
+  "add": {
+    "title": "Add Actors",
+    "name": "Name",
+    "first_name": "First Name",
+    "civility_mr": "Mr. ",
+    "civility_ms": "Ms. ",
+    "last_name": "Last Name",
+    "select_gender": "Select Gender",
+    "gender_male": "Male",
+    "gender_female": "Female",
+    "none": "None",
+    "choose_data": "Choose a date",
+    "save": "Save",
+    "cancel": "Cancel"
+  }
+}
